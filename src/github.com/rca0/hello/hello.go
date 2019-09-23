@@ -8,6 +8,7 @@ const englishHelloPrefix = "Hello, "
 const spanishHelloPrefix = "Hola, "
 const frenchHelloPreffix = "Bonjour, "
 
+// Hello function validate name and language.
 func Hello(name string, language string) string {
 	if name == "" {
 		name = "World"
