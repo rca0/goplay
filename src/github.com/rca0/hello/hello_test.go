@@ -1,6 +1,9 @@
 package main
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestHello(t *testing.T) {
 	assertCorretMessage := func(t *testing.T, got, want string) {
@@ -37,4 +40,10 @@ func TestHello(t *testing.T) {
 
 		assertCorretMessage(t, got, want)
 	})
+}
+
+func BenchmarkHello(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		fmt.Println("hello")
+	}
 }
