@@ -20,3 +20,4 @@ playing with golang languange
 
 - Read more about placeholder strings in the [fmt go doc](https://golang.org/pkg/fmt/#hdr-Printing)
 - Five suggestions for setting up a [go project](https://dave.cheney.net/2014/12/01/five-suggestions-for-setting-up-a-go-project)
+- Testable examples in Go - [The Go Blog](https://blog.golang.org/examples)
