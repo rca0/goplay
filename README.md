@@ -37,3 +37,4 @@ When the benchmark code is executed, it runs "b.N" times and measures how long i
 - Five suggestions for setting up a [go project](https://dave.cheney.net/2014/12/01/five-suggestions-for-setting-up-a-go-project)
 - Testable examples in Go - [The Go Blog](https://blog.golang.org/examples)
 - Writing Benchmarks in Go is another first-class feature of the language - [Benchmarks](https://golang.org/pkg/testing/#hdr-Benchmarks)
+- Package strings implements simple functions to manipulate UTF-8 encoded strings - [Package strings](https://golang.org/pkg/strings/)
