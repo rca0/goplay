@@ -16,6 +16,18 @@ playing with golang languange
 - Write enough code to make the test pass
 - Refactor
 
+### Testable examples
+
+Godoc examples are snippets of Go code that are displayed as package documentation and that are verified by running them as tests.
+
+```go
+func ExampleHello() {
+    fmt.Println("Hello")
+
+    // Output: Hello
+}
+```
+
 ### Benchmarks
 
 ```go
