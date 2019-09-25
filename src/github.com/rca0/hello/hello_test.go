@@ -42,6 +42,12 @@ func TestHello(t *testing.T) {
 	})
 }
 
+func ExampleHello() {
+	fmt.Println("Hello")
+
+	// Output: Hello
+}
+
 func BenchmarkHello(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		fmt.Println("hello")
