@@ -16,6 +16,18 @@ playing with golang languange
 - Write enough code to make the test pass
 - Refactor
 
+### Types of tests
+
+* **Unit tests**: are narrow in scope and typically verify the behaviour of individual methods or functions.
+* **Integration tests**: make sure that multiple components behave correctly together. This can involve several classes as well as testing the integration with other services.
+* **Acceptance tests**: are similar to the integration tests but they focus on the business cases rather than the components themselves.
+* **UI tests**: will make sure that the application functions correctly from a user perspective.
+
+Visualize the tradeoffs that you will make with the test pyramid.
+
+![image](https://user-images.githubusercontent.com/38728338/65744060-8d985900-e0cd-11e9-9e89-e656f6b91090.png)
+
+
 ### Testable examples
 
 Godoc examples are snippets of Go code that are displayed as package documentation and that are verified by running them as tests.
