@@ -1,6 +1,17 @@
 # goplay
 playing with golang languange
 
+### Setting up a Go project
+
+* **Creating Package**: A Package is a directory inside your `$GOPATH/src` path, containing amongst other things, `.go`source files.
+    * The name os package should match the name of the directory, if your package is called `logger`, the path it will be:
+
+```
+$GOPATH/src/github.com/youruser/logger
+```
+
+DISCLAIMER: Packages should contain `ONLY` letters, numbers if you must, but absolutely no punctuation.
+
 ### Few rules to writting tests
 
 - It needs to be in a file with a name like: `XX_test.go`
