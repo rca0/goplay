@@ -66,6 +66,58 @@ When the benchmark code is executed, it runs "b.N" times and measures how long i
 - To run the benchmarks: go test -bench=.
 - By default Benchmarks are run sequentially
 
+### Variadic Functions
+
+Variadic functions can be called with any number of trailing arguments.
+
+```go
+package main
+
+import "fmt"
+
+func sum(sums ...int) {  // Here's function that will take arbitrary number of ints as arguments
+    fmt.Print(nums, " ")
+    total := 0
+
+    for _, num := range nums {
+        total += num
+    }
+    fmt.Println(total)
+}
+
+// Variadic functions can be called in the usual way with individual arguments.
+func main() {
+    sum(1, 2)
+    sum(1, 2, 3)
+
+// If you already have multiple args in a slice, apply then to a variadic function using func(slice...) like this.
+    nums := []int{1, 2, 3, 4}
+    sum(nums...)
+}
+```
+
+### Slices
+
+`reflect.DeepEqual` is useful for seeing if any two variables are the same. (make sure you `import reflect` in the top of your file to have access to `DeepEqual`).
+
+Note that `reflect.DeepEqual` is not **type safe**, the code will compile even if you did something a bit silly.
+
+```go
+func TestSumAll(t *testing.T) {
+
+    got := SumAll([]int{1,2}, []int{0,9})
+    want := "bob"
+
+    if !reflect.DeepEqual(got, want) {
+        t.Errorf("got %v want %v", got, want)
+    }
+}
+```
+
+A way to create a slice is using `make`, allows you to create a slice with a starting capacity of the `len` of the argument.
+
+You can index slices like arrays with `mySlice[N]` to get the value out or assign it a new value with `=`.
+
 ### Important Links
 
 - Read more about placeholder strings in the [fmt go doc](https://golang.org/pkg/fmt/#hdr-Printing)
