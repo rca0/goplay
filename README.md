@@ -118,6 +118,63 @@ A way to create a slice is using `make`, allows you to create a slice with a sta
 
 You can index slices like arrays with `mySlice[N]` to get the value out or assign it a new value with `=`.
 
+
+### Structs, methods and interfaces
+
+#### Struct
+
+A struct is just a named collection of fields where you can store data.
+
+```go
+type Rectangle struct {
+    Width float64
+    Height float64
+}
+```
+
+#### Method
+
+A method is a function with a receiver. A method declaration binds an identifier, the method name, to a method, and associates the method with the receiver's base type.
+
+Methods are very similar to functions but they are called by invoking them on an instance of a particular type. Where you can just call functions wherever you like, such as `Area(rectangle)` you can only call methods on **things**.
+
+```go
+type Rectangle struct {
+    Width  float64
+    Height float64
+}
+
+func (r Rectangle) Area() float64  {
+    return 0
+}
+
+type Circle struct {
+    Radius float64
+}
+
+func (c Circle) Area() float64  {
+    return 0
+}
+```
+
+The syntax for declaring methods is almost the same as functions and that's because they're so similar. The only difference is the syntax of the method receiver `func (receiverName RecieverType) MethodName(args)`.
+
+When your method is called on a variable of that type, you get your reference to its data via the `receiverName` variable. In many other programming languages this is done implicitly and you access the `receiver` via this.
+
+#### Interfaces
+
+An interfaces are a very powerful concept in statically typed languege like Go because they allow you to make functions that can be used with different types and create highly-decoupled code whilst still maintaining type-safety.
+
+Creating a new `type`
+
+```go
+type Shape interface {
+    Area() float64
+}
+```
+
+In Go interface resolution is implicit, if the type you pass in matches what the interface is asking for, it will compile.
+
 ### Important Links
 
 - Read more about placeholder strings in the [fmt go doc](https://golang.org/pkg/fmt/#hdr-Printing)
@@ -126,3 +183,4 @@ You can index slices like arrays with `mySlice[N]` to get the value out or assig
 - Writing Benchmarks in Go is another first-class feature of the language - [Benchmarks](https://golang.org/pkg/testing/#hdr-Benchmarks)
 - Package strings implements simple functions to manipulate UTF-8 encoded strings - [Package strings](https://golang.org/pkg/strings/)
 - Names in Go - [Names Matter](https://talks.golang.org/2014/names.slide#6)
+- Table driven tests - [TableDrivenTests](https://github.com/golang/go/wiki/TableDrivenTests)
