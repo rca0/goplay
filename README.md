@@ -184,3 +184,5 @@ In Go interface resolution is implicit, if the type you pass in matches what the
 - Package strings implements simple functions to manipulate UTF-8 encoded strings - [Package strings](https://golang.org/pkg/strings/)
 - Names in Go - [Names Matter](https://talks.golang.org/2014/names.slide#6)
 - Table driven tests - [TableDrivenTests](https://github.com/golang/go/wiki/TableDrivenTests)
+- Method values - [Method values](https://golang.org/ref/spec#Method_values)
+- Stringer - [Stringer](https://golang.org/pkg/fmt/#Stringer)
